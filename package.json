@@ -1,0 +1,15 @@
+{
+  "name": "jquery_add_removeclass",
+  "version": "1.0.0",
+  "description": "Some jquery served by nodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "latest"
+  },
+  "author": "Killiann H",
+  "license": "ISC"
+}
