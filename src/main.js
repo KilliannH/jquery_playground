@@ -31,20 +31,25 @@ function checkVisible(elm, threshold) {
 }
 
 function doChanges(elm) {
+
+  var elmToChangeId = parseInt(elm.id.split('part')[1]) + 1;
+  var elmToChange = $(`#part${elmToChangeId}`);
+
   if (checkVisible(elm, 0)) {
-    if($(elm).hasClass('end')) {
-      $(elm).removeClass('end');
+
+    if($(elmToChange).hasClass('end')) {
+      $(elmToChange).removeClass('end');
     }
-    if(!$(elm).hasClass('start')) {
-      $(elm).addClass('start');
+    if(!$(elmToChange).hasClass('start')) {
+      $(elmToChange).addClass('start');
     }
   } else {
-    if($(elm).hasClass('start')) {
-      $(elm).removeClass('start');
+    if($(elmToChange).hasClass('start')) {
+      $(elmToChange).removeClass('start');
     }
 
-    if(!$(elm).hasClass('end')) {
-      $(elm).addClass('end');
+    if(!$(elmToChange).hasClass('end')) {
+      $(elmToChange).addClass('end');
     }
   }
 }
